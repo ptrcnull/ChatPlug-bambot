@@ -1,0 +1,17 @@
+{
+  "name": "chatplug-bambot-test",
+  "version": "0.0.2",
+  "description": "ChatPlug bambot service",
+  "main": "index.js",
+  "dependencies": {
+    "chatplug-client": "0.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bjornskjald",
+  "license": "MIT",
+  "bin": {
+    "bam": "index.js"
+  }
+}
