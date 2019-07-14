@@ -1,10 +1,10 @@
 {
   "name": "chatplug-bambot-test",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ChatPlug bambot service",
   "main": "index.js",
   "dependencies": {
-    "chatplug-client": "0.0.2"
+    "chatplug-client": "0.0.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
