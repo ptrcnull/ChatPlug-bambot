@@ -1,5 +1,8 @@
+console.log('[bam] Initializing...')
+
 const Client = require('chatplug-client')
 const client = new Client()
+
 client.on('message', async message => {
   if (message.body.startsWith('!bam')) {
     const res = await client.send({
@@ -14,4 +17,5 @@ client.on('message', async message => {
     console.log(res)
   }
 })
-console.log('Listening!')
+
+console.log('[bam] Listening!')
