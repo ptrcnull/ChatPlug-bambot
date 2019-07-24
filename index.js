@@ -1,12 +1,19 @@
-console.log('[bam] Initializing...')
+console.log('Initializing...')
 
-const Client = require('chatplug-client')
+const { Client } = require('chatplug-client')
 const client = new Client()
 
 client.on('message', async message => {
   if (message.body.startsWith('!bam')) {
-    const res = await client.send({
-      body: 'bam!', // todo: attachments
+    await client.send({
+      body: '',
+      attachments: [
+        {
+          type: 'IMAGE',
+          originId: 'bam',
+          sourceUrl: 'https://cdn.discordapp.com/attachments/456818557519659011/496761562850131978/unknown.png'
+        }
+      ],
       originId: 'bambot',
       author: {
         username: 'BamBot',
@@ -14,8 +21,7 @@ client.on('message', async message => {
       },
       originThreadId: 'bambot'
     })
-    console.log(res)
   }
 })
 
-console.log('[bam] Listening!')
+console.log('Listening!')

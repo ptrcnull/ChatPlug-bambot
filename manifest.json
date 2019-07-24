@@ -1,0 +1,8 @@
+{
+  "name": "bambot",
+  "displayName": "BamBot",
+  "description": "!bam service",
+  "entrypoint": "index.js",
+  "type": "node",
+  "version": "0.0.3"
+}
