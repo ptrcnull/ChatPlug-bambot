@@ -3,8 +3,8 @@ console.log('Initializing...')
 const { Client } = require('chatplug-client')
 const client = new Client()
 
-client.on('message', async message => {
-  if (message.body.startsWith('!bam')) {
+client.on('message', async (target, message) => {
+  if (message.body.startsWith('go!bam')) {
     await client.send({
       body: '',
       attachments: [
@@ -17,9 +17,13 @@ client.on('message', async message => {
       originId: 'bambot',
       author: {
         username: 'BamBot',
-        originId: 'bam'
+        originId: 'bam',
+        avatarUrl: 'https://cdn.discordapp.com/attachments/456818557519659011/496761562850131978/unknown.png'
       },
       originThreadId: 'bambot'
+    }).catch(err => {
+      console.log(err)
+      if (err.result && err.result.errors) console.log(err.result.errors)
     })
   }
 })
